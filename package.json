@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "productName": "my-app",
+  "name": "orville",
+  "productName": "Orville",
   "version": "0.0.1",
   "description": "My Electron application",
   "main": ".webpack/main",
