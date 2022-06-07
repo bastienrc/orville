@@ -1,9 +1,10 @@
 {
   "name": "orville",
   "productName": "Orville",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My Electron application",
   "main": ".webpack/main",
+  "repository": "https://github.com/bastienrc/orville",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -18,18 +19,21 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "executableName": "Orville"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "my_app"
+            "name": "Orville"
           }
         },
         {
           "name": "@electron-forge/maker-zip",
           "platforms": [
-            "darwin"
+            "darwin",
+            "linux"
           ]
         },
         {
@@ -58,7 +62,17 @@
             }
           }
         ]
-      ]
+      ],
+      "publishers": {
+        "name": "@electron-forge/publisher-github",
+        "config": {
+          "repository": {
+            "owner": "bastienrc",
+            "name": "orville"
+          },
+          "prerelease": true
+        }
+      }
     }
   },
   "devDependencies": {
@@ -68,6 +82,7 @@
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
     "@electron-forge/plugin-webpack": "6.0.0-beta.63",
+    "@electron-forge/publisher-github": "^6.0.0-beta.63",
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
@@ -86,6 +101,7 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "update-electron-app": "^2.0.1"
   }
 }
