@@ -175,6 +175,16 @@
   optionalDependencies:
     electron-installer-debian "^3.0.0"
 
+"@electron-forge/maker-rpm@^6.0.0-beta.63":
+  version "6.0.0-beta.63"
+  resolved "https://registry.yarnpkg.com/@electron-forge/maker-rpm/-/maker-rpm-6.0.0-beta.63.tgz#ac37b05e76d00415a7e16244d7f06a383feb851d"
+  integrity sha512-htKNsA3/7nOd5PL6jjdrYCcSXrrIj43aJyOfIuFHswFpjFFmYEgsDCrN8lKZH5y1qdXQefaGOc9MapuBC0GO+w==
+  dependencies:
+    "@electron-forge/maker-base" "6.0.0-beta.63"
+    "@electron-forge/shared-types" "6.0.0-beta.63"
+  optionalDependencies:
+    electron-installer-redhat "^3.2.0"
+
 "@electron-forge/maker-squirrel@^6.0.0-beta.63":
   version "6.0.0-beta.63"
   resolved "https://registry.yarnpkg.com/@electron-forge/maker-squirrel/-/maker-squirrel-6.0.0-beta.63.tgz#6424f643ec256ed75746b7746bffadc272c5f076"
@@ -833,6 +843,11 @@
   integrity sha512-f0KEEe05NvUnat+boPTZ0dgaLZ4SfSouXUgv5noUiefG2ajgKjmETo9ZJyuqsl7dfl2aHlLJUiki6B4ZYldiiw==
   dependencies:
     "@types/node" "*"
+
+"@types/uuid@^8.3.4":
+  version "8.3.4"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.4.tgz#bd86a43617df0594787d38b735f55c805becf1bc"
+  integrity sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==
 
 "@types/ws@^8.5.1":
   version "8.5.3"
@@ -2240,6 +2255,19 @@ electron-installer-debian@^3.0.0:
     lodash "^4.17.4"
     word-wrap "^1.2.3"
     yargs "^15.0.1"
+
+electron-installer-redhat@^3.2.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/electron-installer-redhat/-/electron-installer-redhat-3.3.0.tgz#acdb59d13d738c55debc5214114d36096eda1aed"
+  integrity sha512-hXIXB3uQXmXZy/v3MpbwWN4Of28ALpPt9ZyUDNEoSe0w7QZceL9IqI2K6Q6imiBJCLRC0hmT94WhlKj1RyGOWg==
+  dependencies:
+    "@malept/cross-spawn-promise" "^1.0.0"
+    debug "^4.1.1"
+    electron-installer-common "^0.10.2"
+    fs-extra "^9.0.0"
+    lodash "^4.17.15"
+    word-wrap "^1.2.3"
+    yargs "^16.0.2"
 
 electron-is-dev@^0.3.0:
   version "0.3.0"
@@ -6528,7 +6556,7 @@ yargs-parser@^18.1.2:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs-parser@^20.0.0:
+yargs-parser@^20.0.0, yargs-parser@^20.2.2:
   version "20.2.9"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.9.tgz#2eb7dc3b0289718fc295f362753845c41a0c94ee"
   integrity sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==
@@ -6554,6 +6582,19 @@ yargs@^15.0.1:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
+
+yargs@^16.0.2:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
+  integrity sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==
+  dependencies:
+    cliui "^7.0.2"
+    escalade "^3.1.1"
+    get-caller-file "^2.0.5"
+    require-directory "^2.1.1"
+    string-width "^4.2.0"
+    y18n "^5.0.5"
+    yargs-parser "^20.2.2"
 
 yargs@^17.0.1:
   version "17.5.1"
