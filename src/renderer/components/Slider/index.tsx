@@ -4,6 +4,11 @@ import dataSlider from './dataSlider'
 import BtnSlider from './BtnSlider'
 import React from 'react'
 import img1 from '/static/slider/img1.jpg'
+import img2 from '/static/slider/img2.jpg'
+import img3 from '/static/slider/img3.jpg'
+import img4 from '/static/slider/img4.jpg'
+import img5 from '/static/slider/img5.jpg'
+const imgs = [img1, img2, img3, img4, img5]
 
 export default function Slider() {
   const [slideAnim, setSlideAnim] = useState({ index: 1, inProgress: false })
@@ -59,14 +64,13 @@ export default function Slider() {
               key={obj.id}
               className={slideAnim.index === index + 1 ? "slide active-anim" : "slide"}
             >
-              <h3 style={{ textAlign: 'center' }}>{obj.title}</h3>
-              <img src={img1} alt="" title={obj.title} />
+              <img src={imgs[index]} alt="" title={obj.title} />
             </div>
           )
         })
       }
-      {/* <BtnSlider moveSlide={nextSlide} direction={"next"} />
-      <BtnSlider moveSlide={prevSlide} direction={"prev"} /> */}
+      <BtnSlider moveSlide={nextSlide} direction={"next"} />
+      <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
       <div className="container-dots">
         {Array.from({ length: dataSlider.length }).map((item, index) => {
