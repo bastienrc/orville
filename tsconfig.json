@@ -7,7 +7,6 @@
     "jsx": "react",
     "sourceMap": true,
     "outDir": "./dist",
-    "strict": true,
     "esModuleInterop": true
   }
 }
