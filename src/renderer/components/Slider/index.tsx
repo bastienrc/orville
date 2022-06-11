@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import './Slider.css'
+import './Slider.css'
 import dataSlider from './dataSlider'
 import BtnSlider from './BtnSlider'
 import React from 'react'
