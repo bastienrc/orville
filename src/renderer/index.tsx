@@ -1,13 +1,13 @@
-import React from "react";
-import { render } from "react-dom";
-import App from "./App";
+import React from 'react';
+import { createRoot } from "react-dom/client";
+import App from './App';
 import './index.css';
 
-// Setup root node where our React app will be attached to
-const root = document.createElement("div");
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-root.id = "root";
-document.body.appendChild(root);
-
-// Render the app component
-render(<App />, document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
