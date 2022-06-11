@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import App from "./components/App";
+import App from "./App";
 // import './index.css';
 
 // Setup root node where our React app will be attached to
